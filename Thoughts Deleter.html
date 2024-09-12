@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts Deleter</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ff0000">
+
+    <!-- Add AdSense Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-xxxxxxxxxxxxxxxx", // Replace with your AdSense ID
+            enable_page_level_ads: true
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Upload & Delete Your Unwanted Thoughts</h2>
+        <textarea id="thoughts" placeholder="Write your unwanted thoughts here..."></textarea>
+        <br>
+        <button onclick="eraseThoughts()">Delete Thoughts</button>
+        <p id="feedback" style="color: green;"></p>
+
+        <!-- Add an AdSense ad unit -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"  <!-- Replace with your AdSense ID -->
+             data-ad-slot="1234567890"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <script>
+        function eraseThoughts() {
+            document.getElementById('thoughts').value = ''; // Clear the text area
+            document.getElementById('feedback').textContent = 'Your thoughts have been deleted successfully. Move on!';
+        }
+
+        // Register the service worker for offline support
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then(registration => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                }).catch(err => {
+                    console.log('Service Worker registration failed:', err);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

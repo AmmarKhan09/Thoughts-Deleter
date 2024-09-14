@@ -7,11 +7,6 @@
     "theme_color": "#ff0000",
     "icons": [
         {
-            "src": "https://ammarkhan09.github.io/thoughts-deleter/images/icon-192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
             "src": "https://ammarkhan09.github.io/thoughts-deleter/images/icon-512.png",
             "sizes": "512x512",
             "type": "image/png"

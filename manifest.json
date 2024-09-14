@@ -5,6 +5,7 @@
     "display": "standalone",
     "background_color": "#f0f0f0",
     "theme_color": "#ff0000",
+    "description": "This app helps you stop overthinking by deleting your unwanted thoughts."
     "icons": [
     {
         "src": "https://ammarkhan09.github.io/Thoughts-Deleter/images/icon-192.png",

@@ -2,10 +2,10 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('thoughts-deleter-v1').then(function(cache) {
       return cache.addAll([
-        '/',
-        '/index.html',
-        '/manifest.json',
-        '/images/icon-512.png'
+        '/thoughts-deleter/',
+        '/thoughts-deleter/index.html',
+        '/thoughts-deleter/manifest.json',
+        '/thoughts-deleter/images/icon-512.png'
       ]);
     })
   );

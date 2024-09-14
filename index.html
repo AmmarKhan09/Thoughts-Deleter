@@ -7,6 +7,7 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#ff0000">
 
+    <!-- AdSense script -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6488725103686213"
         crossorigin="anonymous"></script>
     <script>
@@ -73,6 +74,7 @@
         <p id="feedback" style="color: green;"></p>
     </div>
 
+    <!-- AdSense ad unit -->
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-6488725103686213"
@@ -88,7 +90,8 @@
             document.getElementById('thoughts').value = '';
             document.getElementById('feedback').textContent = 'Your thoughts have been deleted successfully. Move on!';
         }
-        
+
+        // Service Worker registration
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js').then(registration => {
@@ -97,6 +100,7 @@
                     console.log('Service Worker registration failed:', err);
                 });
             });
+        }
     </script>
 </body>
 </html>
